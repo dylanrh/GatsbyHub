@@ -19,12 +19,6 @@ export function activate(context: ExtensionContext) {
   const { registerCommand } = commands;
   const { subscriptions } = context;
   const gatsbyCli = new GatsbyCli();
-<<<<<<< HEAD
-  subscriptions.push(
-    registerCommand(
-      // package.json command
-      "gatsbyhub.installGatsby",
-=======
   /*   console.log(Uri.file(path.resolve(__dirname, '../'))); */
   const uri = Uri.file(path.resolve(__dirname));
   console.log('uri: ', uri);
@@ -38,20 +32,10 @@ export function activate(context: ExtensionContext) {
     registerCommand(
       // package.json command
       'gatsbyhub.installGatsby',
->>>>>>> main
       GatsbyCli.installGatsby
     )
   );
   subscriptions.push(
-<<<<<<< HEAD
-    registerCommand("gatsbyhub.createSite", GatsbyCli.createSite)
-  );
-  subscriptions.push(
-    registerCommand("gatsbyhub.developServer", gatsbyCli.developServer)
-  );
-  subscriptions.push(
-    registerCommand("gatsbyhub.disposeServer", gatsbyCli.disposeServer)
-=======
     registerCommand('gatsbyhub.createSite', GatsbyCli.createSite)
   );
   subscriptions.push(
@@ -59,15 +43,10 @@ export function activate(context: ExtensionContext) {
   );
   subscriptions.push(
     registerCommand('gatsbyhub.disposeServer', gatsbyCli.disposeServer)
->>>>>>> main
   );
   subscriptions.push(registerCommand("gatsbyhub.build", GatsbyCli.build));
   subscriptions.push(
-<<<<<<< HEAD
-    registerCommand("gatsbyhub.openPluginDocs", GatsbyCli.installPlugin)
-=======
     registerCommand('gatsbyhub.openPluginDocs', GatsbyCli.installPlugin)
->>>>>>> main
   );
   subscriptions.push(
     createTreeView("plugins", {
